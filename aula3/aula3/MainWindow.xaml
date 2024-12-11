@@ -1,0 +1,35 @@
+﻿<Window x:Class="aula3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:aula3"
+        mc:Ignorable="d"
+        Title="Aula 3" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.532,0.469" Margin="0,0,0,-16">
+        <TextBox x:Name="txtValor1" HorizontalAlignment="Left" Margin="114,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtValor2" HorizontalAlignment="Left" Margin="114,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtResultado" HorizontalAlignment="Left" Margin="114,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.598,2.714" IsEnabled="False"/>
+        <Label Content="Valor 1:" HorizontalAlignment="Left" Margin="36,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valor 2:" HorizontalAlignment="Left" Margin="36,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Resultado:" HorizontalAlignment="Left" Margin="36,191,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdicionar" Content="Adicionar" HorizontalAlignment="Left" Margin="147,261,0,0" VerticalAlignment="Top" Click="btnAdicionar_Click"/>
+        <ComboBox x:Name="cbResultados" HorizontalAlignment="Left" Height="13" Margin="400,70,0,0" VerticalAlignment="Top" Width="94">
+            <Label Content="Label"/>
+        </ComboBox>
+        <ListBox x:Name="lbResultados" HorizontalAlignment="Left" Height="123" Margin="389,158,0,0" VerticalAlignment="Top" Width="144" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Content="ComboBox:" HorizontalAlignment="Left" Height="29" Margin="400,36,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="ListBox:" HorizontalAlignment="Left" Height="29" Margin="400,129,0,0" VerticalAlignment="Top" Width="94"/>
+        <ListView x:Name="listViewResultados" HorizontalAlignment="Left" Height="143" Margin="580,72,0,0" VerticalAlignment="Top" Width="146" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="ListView" HorizontalAlignment="Left" Height="27" Margin="592,37,0,0" VerticalAlignment="Top" Width="67"/>
+        <TreeView x:Name="treeViewResultados" HorizontalAlignment="Left" Height="78" Margin="579,281,0,0" VerticalAlignment="Top" Width="147"/>
+        <Label Content="TreeView" HorizontalAlignment="Left" Height="28" Margin="592,248,0,0" VerticalAlignment="Top" Width="61"/>
+
+    </Grid>
+</Window>
