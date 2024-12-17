@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Registo";
 }
 
 <!DOCTYPE html>
@@ -56,11 +56,10 @@
     
 
     <div class="container">
-        <div class="title">Login</div>
+        <div class="title">Sou ...</div>
         <form>
-            <button type="button" onclick="window.location.href='@Url.Action(" LoginBibliotecario", "Account" )'" class="btn-custom">Bibliotecï¿½rio</button>
-            <button type="button" onclick="window.location.href='@Url.Action(" LoginLeitor", "Account" )'" class="btn-custom">Leitor</button>
-            <button type="button" onclick="window.location.href='@Url.Action(" LoginAdministrador", "Account" )'" class="btn-custom">Administrador</button>
+            <button type="button" onclick="window.location.href='@Url.Action("RegisterLeitor", "Account")'" class="btn-custom">Leitor</button>
+            <button type="button" onclick="window.location.href='@Url.Action("RegisterBibliotecario", "Account")'" class="btn-custom">Bibliotecário</button>
         </form>
     </div>
 </body>

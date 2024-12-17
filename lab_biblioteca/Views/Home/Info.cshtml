@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Sobre Nós";
+    ViewData["Title"] = "Sobre Nï¿½s";
 }
 
 <!DOCTYPE html>
@@ -68,19 +68,25 @@
     </style>
 </head>
 <body>
+    <!-- BotÃµes no canto superior esquerdo -->
+    <div class="top-buttons">
+        <a href="@Url.Action("Index", "Home")" class="btn-top">PÃ¡gina Inicial</a>
+        <a href="@Url.Action("Info", "Home")" class="btn-top">InformaÃ§Ãµes</a>
+    </div>
+
     <div class="container">
-        <h1>Sobre nós...</h1>
+        <h1>Sobre nï¿½s...</h1>
         <div class="info-text">
             <p><strong>Nome:</strong> LEI-UTAD</p>
             <p><strong>Email:</strong> ****************@gmail.com</p>
             <p><strong>Telefone:</strong> 91*****80</p>
-            <p><strong>Horário de funcionamento:</strong> 10:00h - 20:00h</p>
-            <a href="@Url.Action("Index", "Livros")" class="btn-books">Ver livros disponíveis</a>
+            <p><strong>Horï¿½rio de funcionamento:</strong> 10:00h - 20:00h</p>
+            <a href="@Url.Action("Index", "Livros")" class="btn-books">Ver livros disponï¿½veis</a>
         </div>
 
         <div>
-            <img src="C:\Users\Utilizador\source\repos\lab_bibliotecapl4\lab_biblioteca\biblioteca-mapa.jpg" alt="Biblioteca Localização" class="library-img" />
-            <p class="footer-text">Rua da Cultura, nº 123<br />1200-456 Lisboa<br />Portugal</p>
+            <img src="C:\Users\Utilizador\source\repos\lab_bibliotecapl4\lab_biblioteca\biblioteca-mapa.jpg" alt="Biblioteca Localizaï¿½ï¿½o" class="library-img" />
+            <p class="footer-text">Rua da Cultura, nï¿½ 123<br />1200-456 Lisboa<br />Portugal</p>
         </div>
     </div>
 </body>
