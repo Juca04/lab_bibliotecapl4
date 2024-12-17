@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Login - Administrador";
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body style="background-color: #2E2E2E; color: white;">
+    <div class="container text-center" style="margin-top: 100px;">
+        <h1>Administrador</h1>
+        <form method="post" action="@Url.Action("LoginAdministrador", "Account")">
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="username" class="form-control mx-auto" style="width: 300px;" required />
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="password" class="form-control mx-auto" style="width: 300px;" required />
+            </div>
+            <button type="submit" class="btn btn-dark">Login</button>
+        </form>
+    </div>
+</body>
+</html>

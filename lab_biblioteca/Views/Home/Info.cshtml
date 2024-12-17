@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Sobre Nós";
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .info-text {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .btn-books {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2E2E2E;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+            .btn-books:hover {
+                background-color: #555555;
+                color: #fff;
+            }
+
+        .library-img {
+            margin-top: 30px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-text {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sobre nós...</h1>
+        <div class="info-text">
+            <p><strong>Nome:</strong> LEI-UTAD</p>
+            <p><strong>Email:</strong> ****************@gmail.com</p>
+            <p><strong>Telefone:</strong> 91*****80</p>
+            <p><strong>Horário de funcionamento:</strong> 10:00h - 20:00h</p>
+            <a href="@Url.Action("Index", "Livros")" class="btn-books">Ver livros disponíveis</a>
+        </div>
+
+        <div>
+            <img src="C:\Users\Utilizador\source\repos\lab_bibliotecapl4\lab_biblioteca\biblioteca-mapa.jpg" alt="Biblioteca Localização" class="library-img" />
+            <p class="footer-text">Rua da Cultura, nº 123<br />1200-456 Lisboa<br />Portugal</p>
+        </div>
+    </div>
+</body>
+</html>
