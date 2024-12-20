@@ -42,7 +42,7 @@ namespace lab_biblioteca.Controllers
             // Adicionar lógica de autenticação
             return RedirectToAction("Index", "Home");
         }
-        using Microsoft.AspNetCore.Mvc;
+       // using Microsoft.AspNetCore.Mvc;
 
         [HttpPost]
         public IActionResult RegisterLeitor()
