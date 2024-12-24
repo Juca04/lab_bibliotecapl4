@@ -1,3 +1,4 @@
+using lab_biblioteca.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lab_biblioteca.Controllers
