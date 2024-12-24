@@ -1,10 +1,23 @@
 using lab_biblioteca.Models;
+//using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+
+
 
 namespace lab_biblioteca.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+
+        // Construtor para injetar dependências
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
         [HttpGet]
         public IActionResult LoginBibliotecario()
         {
@@ -43,7 +56,7 @@ namespace lab_biblioteca.Controllers
             // Adicionar lógica de autenticação
             return RedirectToAction("Index", "Home");
         }
-       // using Microsoft.AspNetCore.Mvc;
+        
 
         [HttpPost]
         public IActionResult RegisterLeitor()
@@ -119,10 +132,10 @@ namespace lab_biblioteca.Controllers
 
 
         [HttpPost]
-        public IActionResult RegisterBibliotecario(string nome, string username, string password, string morada, string contactos)
-        {
-            return View();
-        }
+        //public IActionResult RegisterBibliotecario(string nome, string username, string password, string morada, string contactos)
+        //{
+          //  return View();
+       // }
         [HttpPost]
         public async Task<IActionResult> RegisterBibliotecario(string nome, string username, string password, string morada, string contactos)
         {
