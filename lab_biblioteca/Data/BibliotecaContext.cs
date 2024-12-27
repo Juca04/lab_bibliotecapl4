@@ -1,4 +1,4 @@
-using lab_biblioteca.Models;
+﻿using lab_biblioteca.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,5 +10,6 @@ namespace lab_biblioteca.Data
             : base(options)
         {
         }
+        public DbSet<lab_biblioteca.Models.Emprestimo> Emprestimo { get; set; } = default!;
     }
 }

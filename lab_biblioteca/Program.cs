@@ -52,5 +52,3 @@ var builder = WebApplication.CreateBuilder(args);
             pattern: "{controller=Home}/{action=Index}/{id?}");
 
         app.Run();
-    }
-}
