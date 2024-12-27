@@ -7,48 +7,50 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adiciona o contexto do banco de dados
-builder.Services.AddDbContext<lab_biblioteca.Data.BibliotecaContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        // Adiciona o contexto do banco de dados
+        builder.Services.AddDbContext<lab_biblioteca.Data.BibliotecaContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configuração do Identity
-builder.Services.AddDefaultIdentity<Bibliotecario>(options =>
-    options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<lab_biblioteca.Data.BibliotecaContext>();
+        // Configuração do Identity
+        builder.Services.AddDefaultIdentity<Bibliotecario>(options =>
+            options.SignIn.RequireConfirmedAccount = false)
+            .AddEntityFrameworkStores<lab_biblioteca.Data.BibliotecaContext>();
 
-builder.Services.AddControllersWithViews();
+        builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-//app.UseHttpsRedirection();
-//app.UseStaticFiles();
+        var app = builder.Build();
+        //app.UseHttpsRedirection();
+        //app.UseStaticFiles();
 
-//app.UseRouting();
+        //app.UseRouting();
 
-//app.UseAuthentication();
-//app.UseAuthorization();
+        //app.UseAuthentication();
+        //app.UseAuthorization();
 
-//app.MapControllerRoute(
-  //  name: "default",
-    //pattern: "{controller=Home}/{action=Index}/{id?}");
-//app.MapRazorPages();
+        //app.MapControllerRoute(
+        //  name: "default",
+        //pattern: "{controller=Home}/{action=Index}/{id?}");
+        //app.MapRazorPages();
 
-//app.Run();
+        //app.Run();
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Home/Error");
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+        app.UseAuthentication(); // Adicionar autenticação
+        app.UseAuthorization();
+
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-app.UseAuthentication(); // Adicionar autenticação
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();
