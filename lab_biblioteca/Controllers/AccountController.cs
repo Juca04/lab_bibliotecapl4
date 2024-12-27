@@ -25,11 +25,17 @@ namespace lab_biblioteca.Controllers
         }
 
         [HttpPost]
-        public IActionResult LoginBibliotecario(string username, string password)
+        public async Task<IActionResult> LoginBibliotecario(string username, string password)
         {
-            // Adicionar lógica de autenticação
-            return RedirectToAction("Index", "Home");
+            var result = await _signInManager.PasswordSignInAsync(username, password, isPersistent: false, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            ModelState.AddModelError(string.Empty, "Login inválido.");
+            return View();
         }
+
 
         [HttpGet]
         public IActionResult LoginLeitor()

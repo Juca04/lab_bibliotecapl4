@@ -108,5 +108,10 @@ namespace lab_biblioteca.Controllers
         {
             return _context.Livros.Any(e => e.Id == id);
         }
+        private async Task<Livro> GetLivroById(int? id)
+        {
+            return await _context.Livros.FirstOrDefaultAsync(m => m.Id == id);
+        }
+
     }
 }
