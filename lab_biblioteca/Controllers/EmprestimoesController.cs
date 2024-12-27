@@ -8,9 +8,9 @@ namespace lab_biblioteca.Controllers
 {
     public class EmprestimoesController : Controller
     {
-        private readonly BibliotecaContext _context;
+        private readonly Data.BibliotecaContext _context;
 
-        public EmprestimoesController(BibliotecaContext context)
+        public EmprestimoesController(Data.BibliotecaContext context)
         {
             _context = context;
         }
