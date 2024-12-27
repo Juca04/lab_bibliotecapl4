@@ -162,5 +162,11 @@ namespace lab_biblioteca.Controllers
         {
             return _context.Emprestimo.Any(e => e.Id == id);
         }
+        private void PopulateDropDownLists(Emprestimo emprestimo = null)
+        {
+            ViewData["IdLivro"] = new SelectList(_context.Set<Livro>(), "Id", "Titulo", emprestimo?.IdLivro);
+            ViewData["IdUsuario"] = new SelectList(_context.Set<Usuario>(), "Id", "Nome", emprestimo?.IdUsuario);
+        }
+
     }
 }
