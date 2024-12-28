@@ -31,6 +31,7 @@ var app = builder.Build();
 
 //app.Run();
 
+<<<<<<< HEAD
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -41,6 +42,21 @@ else
     app.UseHsts();
 }
 
+=======
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Home/Error");
+            app.UseHsts();
+        }
+
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+>>>>>>> c43a86c2bf141035b8890cf0018c1006c2854c24
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
