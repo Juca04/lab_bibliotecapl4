@@ -62,7 +62,7 @@ namespace lab_biblioteca.Controllers
             // Adicionar lógica de autenticação
             return RedirectToAction("Index", "Home");
         }
-        
+
 
         [HttpPost]
         public IActionResult RegisterLeitor()
@@ -140,8 +140,8 @@ namespace lab_biblioteca.Controllers
         [HttpPost]
         //public IActionResult RegisterBibliotecario(string nome, string username, string password, string morada, string contactos)
         //{
-          //  return View();
-       // }
+        //  return View();
+        // }
         [HttpPost]
         public async Task<IActionResult> RegisterBibliotecario(string nome, string username, string password, string morada, string contactos)
         {

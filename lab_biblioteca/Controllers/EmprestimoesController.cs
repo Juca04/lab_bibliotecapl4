@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using lab_biblioteca.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using lab_biblioteca.Data;
-using lab_biblioteca.Models;
 
 namespace lab_biblioteca.Controllers
 {
