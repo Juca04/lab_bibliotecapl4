@@ -1,4 +1,4 @@
-using lab_biblioteca.Models;
+ï»¿using lab_biblioteca.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<lab_biblioteca.Data.BibliotecaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configuração do Identity
+// Configuraï¿½ï¿½o do Identity
 builder.Services.AddDefaultIdentity<Bibliotecario>(options =>
     options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<lab_biblioteca.Data.BibliotecaContext>();
@@ -31,7 +31,6 @@ var app = builder.Build();
 
 //app.Run();
 
-<<<<<<< HEAD
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -42,27 +41,11 @@ else
     app.UseHsts();
 }
 
-=======
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
-        else
-        {
-            app.UseExceptionHandler("/Home/Error");
-            app.UseHsts();
-        }
-
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
->>>>>>> c43a86c2bf141035b8890cf0018c1006c2854c24
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication(); // Adicionar autenticação
+app.UseAuthentication(); // Adicionar autenticaï¿½ï¿½o
 app.UseAuthorization();
 
 app.MapControllerRoute(
